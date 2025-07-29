@@ -1,0 +1,83 @@
+<!-- src/main/resources/public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Placement System</title>
+    
+    <!-- Google Font (Poppins) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    
+    <!-- Our Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Placement Management System</h1>
+        
+        <div class="main-layout">
+            <!-- Left Column: Forms for adding data -->
+            <div class="form-column">
+                <!-- Add Student Form -->
+                <div class="card">
+                    <h2><i class="fas fa-user-plus"></i> Add New Student</h2>
+                    <form id="addStudentForm">
+                        <input type="text" id="studentName" placeholder="Student Name" required>
+                        <input type="text" id="studentMajor" placeholder="Major (e.g., Computer Science)" required>
+                        <button type="submit">Add Student</button>
+                    </form>
+                </div>
+
+                <!-- Add Company Form -->
+                <div class="card">
+                    <h2><i class="fas fa-building"></i> Add New Company</h2>
+                    <form id="addCompanyForm">
+                        <input type="text" id="companyName" placeholder="Company Name" required>
+                        <input type="text" id="companyIndustry" placeholder="Industry (e.g., Tech)" required>
+                        <button type="submit">Add Company</button>
+                    </form>
+                </div>
+                
+                <!-- Place Student Form -->
+                <div class="card">
+                    <h2><i class="fas fa-handshake"></i> Assign Placement</h2>
+                    <form id="placeStudentForm">
+                        <select id="studentSelect" required>
+                            <option value="">Select a Student</option>
+                        </select>
+                        <select id="companySelect" required>
+                            <option value="">Select a Company</option>
+                        </select>
+                        <button type="submit">Place Student</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Right Column: Displaying data -->
+            <div class="display-column">
+                <!-- Students List -->
+                <div class="card">
+                    <h2><i class="fas fa-users"></i> Student Roster</h2>
+                    <ul id="studentList">
+                        <!-- Student data will be populated here -->
+                    </ul>
+                </div>
+
+                <!-- Companies List -->
+                <div class="card">
+                    <h2><i class="fas fa-list-alt"></i> Company List</h2>
+                    <ul id="companyList">
+                         <!-- Company data will be populated here -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
